@@ -1,0 +1,93 @@
+.sidebar{
+  background-image: url('../../../assets/coca-cola-white.png');
+  background-repeat: no-repeat;
+  background-size: 100% 13%;
+  background-position: 0 101%;
+  background-color:  var(--main-color);
+  height: 100vh;
+  width: 13rem;
+  display: grid;
+  grid-template-rows: 13% 50% 20%;
+  align-items: center;
+  justify-items: start;
+  color: white;
+  .item{
+    span{
+      text-transform: capitalize;
+    }
+  }
+  .title {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: baseline;
+    gap: 20px;
+    width: 100%;
+    justify-items: center;
+    justify-content: center;
+    span {
+      color: white;
+      font-size: 25px;
+    }
+    img{
+      width: 30px;
+    }
+  }
+  .links{
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px;
+    justify-items: start;
+    .item{
+      opacity: .7;
+      display: grid;
+      grid-auto-flow: column;
+      gap: 10px;
+      align-items: end;
+      cursor: pointer;
+      width: 100%;
+      padding: 8px 37px 8px 36px;
+      justify-content: start;
+      border-radius: 0px 20px 20px 0px;
+      span{
+        font-size: 15px;
+      }
+      img{
+        width: 20px;
+      }
+    }
+    .item.active ,.item:hover{
+      background: #c92020;
+      transition: .3s;
+      opacity: 1;
+    }
+  }
+  .logout{
+    display: grid;
+    grid-template-rows: auto;
+    gap: 10px;
+    justify-items: start;
+    .item{
+      opacity: .7;
+      display: grid;
+      grid-auto-flow: column;
+      gap: 10px;
+      align-items: end;
+      cursor: pointer;
+      width: 100%;
+      padding: 6px 55px 6px 36px;;
+      justify-content: start;
+      border-radius: 0px 20px 20px 0px;
+      span{
+        font-size: 15px;
+      }
+      img{
+        width:25px;
+      }
+    }
+    .item.active ,.item:hover{
+      background: #c92020;
+      transition: .3s;
+      opacity: 1;
+    }
+  }
+}

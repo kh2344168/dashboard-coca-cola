@@ -1,0 +1,24 @@
+<!-- app.component.html -->
+
+<div class="sidebar">
+  <div class="title">
+    <img src="../../../assets/factoryIcontwo.png" alt="" />
+    <span>MES</span>
+  </div>
+  <div class="links">
+    <div *ngFor="let item of sidebarItems" class="item" [class.active]="item.active">
+      <img [src]="item.icon" alt="" />
+      <span>{{ item.label }}</span>
+    </div>
+  </div>
+  <div class="logout">
+    <div class="item">
+      <img src="../../../assets/setting.png" alt="" />
+      <span>settings</span>
+    </div>
+    <div class="item">
+      <img src="../../../assets/logout.png" alt="" />
+      <span>logout</span>
+    </div>
+  </div>
+</div>
