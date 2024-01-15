@@ -1,0 +1,512 @@
+<div class="content">
+  <div class="head">
+    <div class="left">Dashboard / Production</div>
+    <div class="right">
+      <button>SKU</button>
+      <button class="active">Production</button>
+    </div>
+  </div>
+  <div class="boxes">
+    <div class="box" *ngFor="let factory of factories">
+      <h4 class="title">{{ factory.name }}</h4>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/speed.png" alt="" />
+            <span>Actual speed</span>
+          </div>
+          <div class="number">
+            <span [countUp]="factory.actualSpeed">0</span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/production.png" alt="" />
+            <span>Actual production</span>
+          </div>
+          <div class="number">
+            <span [countUp]="factory.actualProduction"></span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/cycle.png" alt="" />
+            <span>Last hour cycle time</span>
+          </div>
+          <div class="number">
+            <span [countUp]="factory.lastCycleTime"></span>
+            <sub>s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/active.png" alt="" />
+            <span>Ratio of active lines</span>
+          </div>
+          <div class="number">
+            <span >{{ factory.ratioActiveLines }}</span>
+            <sub></sub>
+          </div>
+        </div>
+      </div>
+      <div class="last-shift">
+        <span>Last Shift</span>
+      </div>
+      <div class="cycle">
+        <div class="item" *ngFor="let cycleItem of factory.cycleItems">
+          <div class="progress" [style]="'--i: ' + cycleItem.progress + '; --clr: ' + cycleItem.color">
+            <h3  [countUp]="cycleItem.progress"><span>%</span></h3>
+          </div>
+          <p>{{ cycleItem.label }}</p>
+        </div>
+      </div>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/volume.png" alt="" />
+            <span>Production volume</span>
+          </div>
+          <div class="number">
+            <span [countUp]="500">500</span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/quality.png" alt="" />
+            <span>Production quality</span>
+          </div>
+          <div class="number">
+            <span [countUp]="500">5000</span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<div class="content">
+  <div class="head">
+    <div class="left">Dashboard / Production</div>
+    <div class="right">
+      <button>SKU</button>
+      <button class="active">Production</button>
+    </div>
+  </div>
+  <div class="boxes">
+    <div class="box">
+      <h4 class="title">Factory Name</h4>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/speed.png" alt="" />
+            <span>Actual speed</span>
+          </div>
+          <div class="number">
+            <span> 5,000 </span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/production.png" alt="" />
+            <span>Actual production</span>
+          </div>
+          <div class="number">
+            <span> 20,000  </span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/cycle.png" alt="" />
+            <span>Last hour cycle time</span>
+          </div>
+          <div class="number">
+            <span> 20  </span>
+            <sub>s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/active.png" alt="" />
+            <span>Ratio of active lines</span>
+          </div>
+          <div class="number">
+            <span> 5:2 </span>
+            <sub></sub>
+          </div>
+        </div>
+      </div>
+      <div class="last-shift">
+        <span>Last Shift</span>
+      </div>
+      <div class="cycle">
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #CA4E82">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+
+        </div>
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #00D1DE">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+        </div>
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #FF9F1C">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+        </div>
+      </div>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/volume.png" alt="" />
+            <span>Production volume</span>
+          </div>
+          <div class="number">
+            <span> 500  </span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/quality.png" alt="" />
+            <span>Production quality</span>
+          </div>
+          <div class="number">
+            <span> 5,000 </span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <h4 class="title">Factory Name</h4>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/speed.png" alt="" />
+            <span>Actual speed</span>
+          </div>
+          <div class="number">
+            <span> 5,000 </span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/production.png" alt="" />
+            <span>Actual production</span>
+          </div>
+          <div class="number">
+            <span> 20,000  </span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/cycle.png" alt="" />
+            <span>Last hour cycle time</span>
+          </div>
+          <div class="number">
+            <span> 20  </span>
+            <sub>s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/active.png" alt="" />
+            <span>Ratio of active lines</span>
+          </div>
+          <div class="number">
+            <span> 5:2 </span>
+            <sub></sub>
+          </div>
+        </div>
+      </div>
+      <div class="last-shift">
+        <span>Last Shift</span>
+      </div>
+      <div class="cycle">
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #CA4E82">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+
+        </div>
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #00D1DE">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+        </div>
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #FF9F1C">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+        </div>
+      </div>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/volume.png" alt="" />
+            <span>Production volume</span>
+          </div>
+          <div class="number">
+            <span> 500  </span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/quality.png" alt="" />
+            <span>Production quality</span>
+          </div>
+          <div class="number">
+            <span> 5,000 </span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <h4 class="title">Factory Name</h4>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/speed.png" alt="" />
+            <span>Actual speed</span>
+          </div>
+          <div class="number">
+            <span> 5,000 </span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/production.png" alt="" />
+            <span>Actual production</span>
+          </div>
+          <div class="number">
+            <span> 20,000  </span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/cycle.png" alt="" />
+            <span>Last hour cycle time</span>
+          </div>
+          <div class="number">
+            <span> 20  </span>
+            <sub>s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/active.png" alt="" />
+            <span>Ratio of active lines</span>
+          </div>
+          <div class="number">
+            <span> 5:2 </span>
+            <sub></sub>
+          </div>
+        </div>
+      </div>
+      <div class="last-shift">
+        <span>Last Shift</span>
+      </div>
+      <div class="cycle">
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #CA4E82">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+
+        </div>
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #00D1DE">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+        </div>
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #FF9F1C">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+        </div>
+      </div>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/volume.png" alt="" />
+            <span>Production volume</span>
+          </div>
+          <div class="number">
+            <span> 500  </span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/quality.png" alt="" />
+            <span>Production quality</span>
+          </div>
+          <div class="number">
+            <span> 5,000 </span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="box">
+      <h4 class="title">Factory Name</h4>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/speed.png" alt="" />
+            <span>Actual speed</span>
+          </div>
+          <div class="number">
+            <span> 5,000 </span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/production.png" alt="" />
+            <span>Actual production</span>
+          </div>
+          <div class="number">
+            <span> 20,000  </span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/cycle.png" alt="" />
+            <span>Last hour cycle time</span>
+          </div>
+          <div class="number">
+            <span> 20  </span>
+            <sub>s</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/active.png" alt="" />
+            <span>Ratio of active lines</span>
+          </div>
+          <div class="number">
+            <span> 5:2 </span>
+            <sub></sub>
+          </div>
+        </div>
+      </div>
+      <div class="last-shift">
+        <span>Last Shift</span>
+      </div>
+      <div class="cycle">
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #CA4E82">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+
+        </div>
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #00D1DE">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+        </div>
+        <div class="item">
+          <div class="progress" style="--i: 75; --clr: #FF9F1C">
+            <h3>75<span>%</span></h3>
+          </div>
+          <p>OEE</p>
+        </div>
+      </div>
+      <div class="data">
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/volume.png" alt="" />
+            <span>Production volume</span>
+          </div>
+          <div class="number">
+            <span> 500  </span>
+            <sub>L</sub>
+          </div>
+        </div>
+        <div class="data-item">
+          <div class="name-icon">
+            <img src="assets/quality.png" alt="" />
+            <span>Production quality</span>
+          </div>
+          <div class="number">
+            <span> 5,000 </span>
+            <sub>L/s</sub>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->

@@ -1,0 +1,172 @@
+.content {
+  width: 97%;
+  margin: auto;
+  .head {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    .left {
+      font-weight: 600;
+      font-size: 15px;
+    }
+    .right {
+      justify-self: end;
+      button {
+        width: 7rem;
+        height: 2rem;
+        padding: 0;
+        background-color: white;
+        color: black;
+      }
+      button.active {
+        background-color: red;
+        color: white;
+      }
+    }
+  }
+  .boxes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+    justify-items: center;
+    margin-top: 23px;
+    .box {
+      border-radius: 10px;
+      background: rgb(255, 255, 255);
+      width: 14.5rem;
+      height: 100%;
+      box-shadow: 1px 1px 6px 0px rgba(124, 124, 124, 0.479);
+      .title {
+        background-color: #08415c;
+        padding: 8px;
+        color: white;
+        font-size: 10px;
+        border-radius: 10px 10px 0px 0px;
+        padding-left: 15px;
+      }
+      .data {
+        display: grid;
+        gap: 4px;
+        .data-item {
+          display: grid;
+          grid-template-columns: 64% 35%;
+          grid-template-rows: 30px;
+          .name-icon {
+            margin-left: 10px;
+            span {
+              font-size: 10px;
+              margin-left: 3px;
+            }
+            img {
+              width: 20px;
+            }
+          }
+          .number {
+            color: #8d9192;
+            font-size: 15px;
+          }
+        }
+      }
+      .last-shift {
+        position: relative;
+        span {
+          position: relative;
+          background-color: white;
+          width: 35%;
+          display: inline-block;
+          z-index: 1000;
+          text-align: center;
+          left: 45%;
+          font-size: 10px;
+        }
+      }
+      .last-shift::after {
+        content: "";
+        width: 100%;
+        height: 1px;
+        background-color: black;
+        position: absolute;
+        top: 50%;
+        left: 0;
+      }
+      .cycle {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: space-around;
+        margin: 5px 0px;
+        .item {
+          display: grid;
+          justify-content: center;
+          justify-items: center;
+          .progress {
+            position: relative;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            transition: 0.3s;
+            background: #444
+              linear-gradient(to right, transparent 50%, var(--clr) 0);
+            h3 {
+              position: absolute;
+              top: 30%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              font-size: 11px;
+              font-weight: 500;
+              z-index: 1;
+              color: black;
+              span {
+                font-size: 11px;
+                font-weight: 400;
+              }
+            }
+            h4 {
+              position: absolute;
+              top: 62%;
+              left: 50%;
+              transform: translateX(-50%);
+              z-index: 1;
+              font-weight: 500;
+              color: var(--clr);
+            }
+          }
+          .progress::before {
+            content: "";
+            display: block;
+            margin-left: 50%;
+            top: 0;
+            width: 50%;
+            transform-origin: left;
+            border-radius: 0 100% 100% 0/50%;
+            background-attachment: red;
+          }
+          .progress::after {
+            content: "";
+            position: absolute;
+            inset: 4px;
+            border-radius: 50%;
+            background: white;
+          }
+          .progress::before {
+            background: var(--clr);
+            transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
+            animation-name: example;
+            animation-duration: 4s;
+
+          }
+          animation: god;
+          @keyframes example {
+            from {
+              transform: rotate(calc(((0 - 0) * 0.01turn)));
+            }
+            to {
+              transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
+            }
+          }
+          p {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+  }
+}

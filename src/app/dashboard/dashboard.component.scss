@@ -1,0 +1,10 @@
+.dashboard{
+  display: grid;
+  grid-template-columns: 16% 82%;
+  background-color: #f4f7fe;
+  .coponiant{
+    display: grid;
+    height: 50rem;
+    grid-template-rows: 13% 87%  ;
+  }
+}

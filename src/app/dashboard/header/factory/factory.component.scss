@@ -1,0 +1,41 @@
+/* factory.component.css */
+.factory {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  .factory-container {
+    background-color: #08415c;
+    padding: 5px;
+    display: grid;
+    grid-template-columns: 20px 60% 7%;
+    color: white;
+    width: 11rem;
+    height: 2.1rem;
+    border-radius: 10px;
+    gap: 10px;
+    align-items: center;
+    justify-content: space-evenly;;
+    .icon {
+      width: 18px;
+      height: 18px;
+      margin-right: 10px;
+    }
+    .factory-name {
+      font-weight: bold;
+      margin-right: 10px;
+      font-size: 12px;
+    }
+    .down-arrow {
+      font-size: 1rem; /* Adjust the size as needed */
+      font-weight: bold;
+      justify-self: end;
+    }
+  }
+  .line {
+    background-color: #08415c;
+    padding: 5px;
+    border-radius: 10px;
+    width: 2rem;
+    text-align: center;
+  }
+}
