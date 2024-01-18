@@ -19,6 +19,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';  // Add FormsModule
 import { ContentComponent } from './dashboard/content/content.component';
 import { CountUpModule } from 'ngx-countup';
+import { LineNameComponent } from './dashboard/line-name/line-name.component';
+import { NgChartsModule } from 'ng2-charts';
+import { RiChartsComponent } from './dashboard/line-name/ri-charts/ri-charts.component';
+import { BoxesComponent } from './dashboard/line-name/boxes/boxes.component';
+import { TimeLineComponent } from './dashboard/line-name/time-line/time-line.component';
+import { LineChartComponent } from './dashboard/line-name/line-chart/line-chart.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +37,12 @@ import { CountUpModule } from 'ngx-countup';
     FactoryComponent,
     DateComponent,
     ContentComponent,
+    LineNameComponent,
+    RiChartsComponent,
+    BoxesComponent,
+    TimeLineComponent,
+    LineChartComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -43,6 +55,8 @@ import { CountUpModule } from 'ngx-countup';
     MatIconModule,
     FormsModule, // Add FormsModule
     CountUpModule,
+    NgChartsModule
+
   ],
   providers: [],
   bootstrap: [AppComponent],

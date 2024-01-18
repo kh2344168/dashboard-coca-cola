@@ -1,0 +1,66 @@
+.line-chart {
+  height: 14rem;
+  display: grid;
+  justify-items: center;
+  .box {
+    background-color: white;
+    width: 98%;
+    border-radius: 5px;
+    padding: 5px 0;
+    padding-left: 10px;
+    box-shadow: 1px 1px 9px 0px #6e6e6ead;
+    height: 100%;
+
+    .head {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      border-bottom: 1px solid #ddd;
+      align-items: center;
+
+      .title {
+        display: grid;
+        grid-auto-flow: column;
+        padding: 5px;
+        justify-content: left;
+        gap: 2px;
+        padding-left: 15px;
+        img {
+          width: 18px;
+        }
+        span {
+          font-size: 11px;
+          font-weight: 600;
+        }
+      }
+      ul {
+        height: 100%;
+        display: grid;
+        grid-auto-flow: column;
+        align-items: center;
+        margin: 0;
+        .OEE {
+          font-weight: 600;
+          font-size: 17px;
+          position: relative;
+
+          span {
+            display: block;
+          }
+          small {
+            position: absolute;
+            top: 18px;
+          }
+          small::after {
+            content: "";
+            width: 3rem;
+            height: 3px;
+            background-color: red;
+            position: absolute;
+            left: -50%;
+            top: 6px;
+          }
+        }
+      }
+    }
+  }
+}

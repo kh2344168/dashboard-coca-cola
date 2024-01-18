@@ -1,0 +1,76 @@
+.ri-charts {
+  box-shadow: 1px 1px 9px 0px #6e6e6ead;
+  border-radius: 10px;
+  .cycle-time {
+    background-color: white;
+    width: 16rem;
+    border-bottom: 1px solid #ddd;
+
+    .title {
+      display: grid;
+      grid-auto-flow: column;
+      padding: 10px;
+      justify-content: start;
+      gap: 30px;
+      border-bottom: 1px solid #ddd;
+      height: 2.3rem;
+      p {
+        font-weight: 600;
+        position: relative;
+        margin-left: 15px;
+      }
+      p::before {
+        content: "";
+        width: 7px;
+        height: 7px;
+        background-color: var(--clr);
+        position: absolute;
+        left: -20%;
+        top: 35%;
+        border-radius: 50%;
+      }
+      span {
+        color: #c5c1c1;
+      }
+    }
+    .Chart {
+      width: 100%;
+      height: 7.3rem;
+      text-align: center;
+      margin: auto;
+      margin-top: 10px;
+      text-align: center;
+      margin-left: 8px;
+    }
+    .button-data {
+      display: grid;
+      grid-auto-flow: column;
+
+      .item {
+        display: grid;
+        grid-auto-flow: column;
+        justify-content: center;
+        align-items: baseline;
+        gap: 5px;
+        span {
+          font-size: 11px;
+        }
+        h4 {
+          font-weight: 500;
+          font-size: 13px;
+        }
+      }
+      .avg {
+        h4 {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+  .cycle-time:first-child{
+    border-radius: 8px 8px 0 0 ;
+  }
+  .cycle-time:last-child{
+    border-radius:  0 0 8px 8px ;
+  }
+}

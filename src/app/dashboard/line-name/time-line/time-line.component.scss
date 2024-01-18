@@ -1,0 +1,47 @@
+.time-line {
+  display: grid;
+  justify-items: center;
+  .box {
+    background-color: white;
+    width: 98%;
+    border-radius: 5px;
+    padding: 5px 0;
+    box-shadow: 1px 1px 9px 0px #6e6e6ead;
+    height: 7rem;
+
+    .title {
+      display: grid;
+      grid-auto-flow: column;
+      padding: 5px;
+      justify-content: left;
+      border-bottom: 1px solid #ddd;
+      gap: 2px;
+      padding-left: 15px;
+      img {
+        width: 18px;
+      }
+      span {
+        font-size: 11px;
+        font-weight: 600;
+      }
+    }
+    .progress-items {
+      display: grid;
+      grid-template-columns: 10% 80%;
+      height: 80%;
+      align-items: center;
+      justify-content: center;
+      justify-items: end;
+      .progress {
+        height: 1.3rem;
+        width: 100%;
+      }
+      span {
+        width: 50px;
+        font-size: 9px;
+        line-height: 1;
+        font-weight: 600;
+      }
+    }
+  }
+}

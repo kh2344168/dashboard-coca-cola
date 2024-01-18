@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ViewEncapsulation } from '@angular/core';
-import { CountUpOptions } from 'countup.js';
 
 @Component({
   selector: 'app-root',
