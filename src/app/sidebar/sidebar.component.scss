@@ -1,5 +1,5 @@
 .sidebar{
-  background-image: url('../../../assets/coca-cola-white.png');
+  background-image: url('../../assets/coca-cola-white.png');
   background-repeat: no-repeat;
   background-size: 100% 13%;
   background-position: 0 101%;
@@ -27,6 +27,7 @@
     width: 100%;
     justify-items: center;
     justify-content: center;
+    cursor: pointer;
     span {
       color: rgb(255, 255, 255);
       font-size: 25px;

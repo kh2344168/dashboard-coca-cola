@@ -6,11 +6,11 @@
     </div>
     <div class="numbers">
       <div class="num-item">
-        <span>5,000 <sub>bph</sub></span>
+        <span [countUp]="5000" >5,000 <sub>bph</sub></span>
         <small>Production /h</small>
       </div>
       <div class="num-item">
-        <span>7,000 <sub>KM</sub></span>
+        <span  [countUp]="7000" >7,000 <sub>KM</sub></span>
         <small>Actual Production</small>
       </div>
     </div>
@@ -20,7 +20,7 @@
           <div class="bar" style="--i: 76% ; --clr: #FF5400"></div>
           <small>Production Yield</small>
         </div>
-        <span>76%</span>
+        <span  [countUp]="76" > 76%</span>
       </div>
     </div>
   </div>
@@ -32,7 +32,7 @@
     <div class="cycle">
       <div class="item">
         <div class="progress" style="--i: 76 ; --clr: #08415C">
-          <h3 ><span>76%</span></h3>
+          <h3  [countUp]="76"  ><span>76%</span></h3>
         </div>
         <p>OEE</p>
       </div>
@@ -43,7 +43,7 @@
           <div class="bar" style="--i: 80% ; --clr: #FF5400"></div>
           <small>Production Yield</small>
         </div>
-        <span>80%</span>
+        <span  [countUp]="80" >80%</span>
       </div>
       <div class="items">
         <div class="item">
@@ -57,26 +57,26 @@
           <div class="bar" style="--i: 60% ; --clr: #FF5400"></div>
           <small>Production Yield</small>
         </div>
-        <span>60%</span>
+        <span [countUp]="60"  > 60%</span>
       </div>
     </div>
   </div>
   <div class="box product">
     <div class="title">
-      <img src="assets/product.png" alt="" />
-      <span>Total Production</span>
+      <img src="assets/energy.png" alt="" />
+      <span>Power KPI</span>
     </div>
     <div class="numbers">
       <div class="num-item">
-        <span>5,000 <sub>bph</sub></span>
+        <span  [countUp]="5000" >5,000 <sub>bph</sub></span>
         <small>Production /h</small>
       </div>
       <div class="num-item">
-        <span>7,000 <sub>KM</sub></span>
+        <span  [countUp]="7000" >7,000 <sub>KM</sub></span>
         <small>Actual Production</small>
       </div>
       <div class="num-item">
-        <span>5,000 <sub>bph</sub></span>
+        <span  [countUp]="5000" >5,000 <sub>bph</sub></span>
         <small>Production /h</small>
       </div>
     </div>

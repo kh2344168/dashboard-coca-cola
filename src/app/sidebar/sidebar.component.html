@@ -1,12 +1,12 @@
 <!-- app.component.html -->
 
-<div class="sidebar">
-  <div class="title">
-    <img src="assets/factoryIcontwo.png" alt="" />
+<div class="sidebar" >
+  <div class="title" routerLink="/home">
+    <img src="assets/factoryIcontwo.png"  alt="" />
     <span>MES</span>
   </div>
   <div class="links">
-    <div *ngFor="let item of sidebarItems" class="item" [class.active]="item.active">
+    <div *ngFor="let item of sidebarItems" class="item" [class.active]="item.active" [routerLink]="item.link">
       <img [src]="item.icon" alt="" />
       <span>{{ item.label }}</span>
     </div>
@@ -18,7 +18,7 @@
     </div>
     <div class="item">
       <img src="assets/logout.png" alt="" />
-      <span>logout</span>
+      <span routerLink="/">logout</span>
     </div>
   </div>
 </div>

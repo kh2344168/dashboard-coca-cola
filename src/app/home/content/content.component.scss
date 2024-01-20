@@ -24,6 +24,7 @@
     }
   }
   .boxes {
+    cursor: pointer;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px 20px;
@@ -151,7 +152,6 @@
             transform: rotate(calc(((var(--i) - 50) * 0.01turn)));
             animation-name: example;
             animation-duration: 4s;
-
           }
           animation: god;
           @keyframes example {

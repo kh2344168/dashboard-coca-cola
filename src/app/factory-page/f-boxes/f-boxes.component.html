@@ -1,0 +1,134 @@
+<div class="boxes">
+  <div class="box product">
+    <div class="title">
+      <img src="assets/product.png" alt="" />
+      <span>Total Production</span>
+    </div>
+    <div class="items">
+      <div class="item">
+        <div class="icon">
+          <img src="assets/bottle.png" alt="" />
+          <span>Bottle</span>
+        </div>
+        <div class="number">
+          <span [countUp]="500">500</span>
+          <small>k</small>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon">
+          <img src="assets/pack.png" alt="" />
+          <span>pack</span>
+        </div>
+        <div class="number">
+          <span [countUp]="50">50</span>
+          <small>k</small>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon">
+          <img src="assets/pallete.png" alt="" />
+          <span>pallete</span>
+        </div>
+        <div class="number">
+          <span [countUp]="10">10</span>
+          <small>k</small>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="box performance">
+    <div class="title">
+      <img src="assets/pereformance.png" alt="" />
+      <span>Performance Indicator KPI</span>
+    </div>
+    <div class="cycle">
+      <div class="item">
+        <div class="progress" style="--i: 76; --clr: #ca4e82">
+          <h3 [countUp]="76"><span>76%</span></h3>
+        </div>
+        <p>OEE</p>
+      </div>
+      <div class="item">
+        <div class="progress" style="--i: 76; --clr: #00d1de">
+          <h3 [countUp]="76"><span>76%</span></h3>
+        </div>
+        <p>OEE</p>
+      </div>
+      <div class="item">
+        <div class="progress" style="--i: 76; --clr: #ff9f1c">
+          <h3 [countUp]="76"><span>76%</span></h3>
+        </div>
+        <p>OEE</p>
+      </div>
+    </div>
+    <div class="bars">
+      <div class="items">
+        <div class="item">
+          <div class="bar" style="--i: 30%; --clr: #2c3e50"></div>
+          <small>Production Yield</small>
+        </div>
+        <span> <small [countUp]="30">30</small>%</span>
+      </div>
+      <div class="items">
+        <div class="item">
+          <div class="bar" style="--i: 80%; --clr: #2c3e50"></div>
+          <small>Production Yield</small>
+        </div>
+        <span><small [countUp]="80">80</small>%</span>
+      </div>
+    </div>
+  </div>
+  <div class="box usage">
+    <div class="title">
+      <img src="assets/usage.png" alt="" />
+      <span>Usage KPI</span>
+    </div>
+    <div class="items">
+      <div class="item">
+        <div class="icon">
+          <img src="assets/energy.png" alt="" />
+          <span>Energy</span>
+        </div>
+        <div class="number">
+          <div class="nom-item">
+            <div class="top">Per Liter</div>
+            <div class="bottom">
+              <span [countUp]="500">50 </span>
+              <sub> 3</sub>
+            </div>
+          </div>
+          <div class="nom-item">
+            <div class="top">Per Bottle</div>
+            <div class="bottom">
+              <span [countUp]="500">50</span>
+              <small>k</small>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="icon">
+          <img src="assets/water.png" alt="" />
+          <span>Water</span>
+        </div>
+        <div class="number">
+          <div class="nom-item">
+            <div class="top">Per Liter</div>
+            <div class="bottom">
+              <span [countUp]="500">50 </span>
+              <sub> L</sub>
+            </div>
+          </div>
+          <div class="nom-item">
+            <div class="top">Per Bottle</div>
+            <div class="bottom">
+              <span [countUp]="500">50</span>
+              <small>L</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

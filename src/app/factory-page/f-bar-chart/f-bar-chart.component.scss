@@ -1,0 +1,55 @@
+.line-chart {
+  height: 14rem;
+  display: grid;
+  justify-items: center;
+  .box {
+    background-color: white;
+    width: 98%;
+    border-radius: 5px;
+    padding: 5px 0;
+    padding-left: 10px;
+    box-shadow: 1px 1px 9px 0px #6e6e6ead;
+    height: 100%;
+    position: relative;
+    .head {
+      display: grid;
+      grid-template-columns: 60% 40%;
+      border-bottom: 1px solid #ddd;
+      align-items: center;
+
+      .title {
+        display: grid;
+        grid-auto-flow: column;
+        padding: 5px;
+        justify-content: left;
+        gap: 5px;
+        padding-left: 15px;
+        align-items: center;
+        img {
+          width: 18px;
+        }
+        span {
+          font-size: 11px;
+          font-weight: 600;
+        }
+      }
+
+    }
+    .off-on{
+      position: absolute;
+      left: 1.5rem;
+      bottom:  50%;
+      writing-mode:vertical-rl;
+      transform: rotate(180deg);
+      font-weight: 600;
+    }
+    .off{
+      position: absolute;
+      top: -.5rem;
+    }
+    .on{
+      position: absolute;
+      bottom: 5rem;
+    }
+  }
+}

@@ -60,7 +60,7 @@
         .item {
           .bar {
             height: 7px;
-            background-color: #B2BEC39C;
+            background-color: #b2bec39c;
             width: 100%;
             position: relative;
             border-radius: 10px;
@@ -75,6 +75,15 @@
             left: 0;
             top: 0;
             border-radius: 10px;
+            animation: baranme 2s;
+          }
+          @keyframes baranme {
+            from {
+              width: 0;
+            }
+            to {
+              width: var(--i);
+            }
           }
           small {
             font-size: 8px;
@@ -106,18 +115,17 @@
           height: 60px;
           h3 {
             top: 42%;
-            span{
+            span {
               font-size: 14px;
               font-weight: 600;
             }
           }
-
         }
         .progress::after {
           inset: 6px;
         }
       }
-      p{
+      p {
         font-size: 12px;
         font-weight: 600;
       }
