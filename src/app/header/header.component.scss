@@ -8,6 +8,7 @@ header{
   position: fixed;
   top: 0;
   box-shadow: 1px -10px 20px 0px;
+  z-index: 10000;
   .container-header{
     /* background-color: rgba(158, 80, 80, 0.473); */
     width: 100%;

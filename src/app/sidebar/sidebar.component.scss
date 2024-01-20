@@ -12,8 +12,9 @@
   justify-items: start;
   color: white;
   position: fixed;
-  z-index: 10000;
+  z-index: 100000;
   left: 0;
+
   .item{
     span{
       text-transform: capitalize;
