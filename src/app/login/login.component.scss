@@ -1,6 +1,7 @@
 .login {
   height: 100vh;
   overflow: hidden;
+  background-color: #fff;
   .back_icon {
     height: 100vh;
     background-color: var(--main-color);
@@ -15,7 +16,7 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    grid-template-rows: 50% 22% 15%;
+    grid-template-rows: 50% 25% 25%;
     .title {
       display: grid;
       grid-auto-flow: column;
