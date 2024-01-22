@@ -1,4 +1,4 @@
-header{
+header {
   background-color: #ffffff;
   width: 100%;
   height: 2.8rem;
@@ -9,28 +9,29 @@ header{
   top: 0;
   box-shadow: 1px -10px 20px 0px;
   z-index: 10000;
-  .container-header{
+
+  .container-header {
     /* background-color: rgba(158, 80, 80, 0.473); */
     width: 100%;
     height: 100%;
-    .items{
+    padding-left: 18%;
+
+    .items {
       display: grid;
       height: 100%;
       align-content: center;
       align-items: center;
-      grid-template-columns: 32% 41% 20%;
+      grid-template-columns: 40% 50% 10%;
       justify-content: center;
-      .days{
+      .days {
         justify-self: end;
       }
-      .data{
+      .data {
         justify-self: start;
       }
-    .mat-form-field{
-      height: 50px;
-    }
+      .mat-form-field {
+        height: 50px;
+      }
     }
   }
 }
-
-

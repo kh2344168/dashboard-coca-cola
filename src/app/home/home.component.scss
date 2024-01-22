@@ -1,10 +1,11 @@
 .items_home {
   display: grid;
-  grid-template-columns: 16% 82%;
+  grid-template-columns: 100%;
   background-color: #f4f7fe;
-  .coponiant {
+  .coponiant{
+    width: 80%;
     display: grid;
     height: 50rem;
-    grid-template-rows: 13% 87%;
+    grid-template-rows: 13% 87%  ;
   }
 }

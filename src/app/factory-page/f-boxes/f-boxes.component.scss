@@ -1,13 +1,13 @@
 .boxes {
   display: grid;
-  grid-auto-flow: column;
+  grid-template-columns: repeat(3 , 1fr);
   justify-content: center;
   gap: 10px;
   height: 6rem;
   .box {
     max-height: 8rem;
     background-color: white;
-    width: 12rem;
+    width: 100%;
     border-radius: 5px;
     padding: 5px 0;
     box-shadow: 1px 1px 9px 0px #6e6e6ead;
